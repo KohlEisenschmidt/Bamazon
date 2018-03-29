@@ -43,7 +43,7 @@ function displayAndAsk() {
           productToBuy();
           break;
   
-        case "No. Just browsing":
+        case "No. Just browsing.":
           declinedSale();
           break;
         }
@@ -51,14 +51,14 @@ function displayAndAsk() {
     } 
 
 function declinedSale(){
-    if (err) throw err;
-    console.log("Let me know if you need any help.\n");
-    // inquirer
-    // .prompt({
-    //     message: "Let me know if you need any help."
-    //   })
-    displayAndAsk();
-}
+
+        console.log("Let me know if you need any help.\n");
+        // inquirer
+        // .prompt({
+        //     message: "Let me know if you need any help."
+        //   })
+        displayAndAsk();
+    }
 
 function productToBuy(){
     inquirer

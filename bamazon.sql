@@ -13,7 +13,7 @@ CREATE TABLE products (
     PRIMARY KEY (id)
 );
 
-SELECT * FROM products
+-- SELECT * FROM products
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES("ball", "sport", 5, 3);
@@ -29,6 +29,21 @@ VALUES("spoon", "kitchen", 7, 20);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES("soap", "bath", 2, 20);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES("toothbrush", "bath", 3, 15);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES("lightbulb", "home", 5, 10);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES("book", "entertainment", 10, 7);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES("oil", "auto", 5, 5);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES("scissors", "home", 2, 6);
 
 -- INSERT INTO Top5000 (artistName, songName, releseYear, worldRating,
 --             USRating, UKRating, europeRating, restofworldRating)
