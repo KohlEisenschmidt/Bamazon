@@ -60,6 +60,7 @@ function declinedSale(){
         displayAndAsk();
     }
 
+
 function productToBuy(){
     inquirer
     .prompt({

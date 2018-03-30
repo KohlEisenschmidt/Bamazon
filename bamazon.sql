@@ -45,8 +45,3 @@ VALUES("oil", "auto", 5, 5);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES("scissors", "home", 2, 6);
 
--- INSERT INTO Top5000 (artistName, songName, releseYear, worldRating,
---             USRating, UKRating, europeRating, restofworldRating)
--- VALUES("Bing Crosby", "White Christmas",
---  1942, 39.903, 23.929, 5.7, 2.185, 0.54  
--- );
