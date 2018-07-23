@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
-
+//var results = data
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -13,19 +13,20 @@ var connection = mysql.createConnection({
   database: "bamazon"
 });
 
-connection.connect(function(err) {
-  if (err) throw err;
-    // console.log("connected as id " + connection.threadId);
-  
-    connection.query("SELECT * FROM products", function(err, results){
-      if(err) throw err;
-      console.log(results);
-      connection.end();
-    })
+ function displayWares(){
+    connection.connect(function(err) {
+        if (err) throw err;
+          // console.log("connected as id " + connection.threadId);
+        
+          connection.query("SELECT * FROM products", function(err, results){
+            if(err) throw err;
+            console.log(results);
+          //   connection.end();
+          })  
+      //   displayAndAsk();
+      });
+ }
 
-
-  displayAndAsk();
-});
 function displayAndAsk() {
     inquirer
       .prompt({
@@ -44,6 +45,7 @@ function displayAndAsk() {
           break;
   
         case "No. Just browsing.":
+
           declinedSale();
           break;
         }
@@ -51,17 +53,14 @@ function displayAndAsk() {
     } 
 
 function declinedSale(){
-
+    displayWares();
         console.log("Let me know if you need any help.\n");
-        // inquirer
-        // .prompt({
-        //     message: "Let me know if you need any help."
-        //   })
+      
         displayAndAsk();
     }
 
 
-function productToBuy(){
+function productToBuy(results){
     inquirer
     .prompt({
         name: "id",
@@ -132,3 +131,6 @@ function productToBuy(){
     //     }
       });
     }
+
+    displayAndAsk();
+    
